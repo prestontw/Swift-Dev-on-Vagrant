@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   # create our image
   config.vm.define "testdev" do |a|
     a.vm.provider "docker" do |d|
-      d.image = "localuser/dev_base"
+      d.image = "localuser/dev_base:S16"
       d.name = "swift_development"
       d.has_ssh = true
     end
