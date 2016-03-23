@@ -1,5 +1,5 @@
 # this is the minimal dockerfile necessary to set it up with vagrant
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 RUN locale-gen en_US.UTF-8
 
 # install common dependencies
