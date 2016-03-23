@@ -25,3 +25,8 @@ from this partially set-up container.
 We assume that we are using the docker provider for its excellent performance on Linux.
 Additionally, rather than specifying the location of a dockerfile,
 we use a specific docker image (see the dockerfile section above).
+
+## TODO
+See if there is a way to set the tag from vagrant.
+But then again, this shouldn't be an issue
+once we consolidate to a simple base container.
