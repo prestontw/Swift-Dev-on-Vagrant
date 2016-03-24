@@ -29,6 +29,9 @@ RUN mkdir -p /home/vagrant/.ssh \
 # don't clean packages, we might be using vagrant-cachier
 RUN rm /etc/apt/apt.conf.d/docker-clean
 
+# if we don't know the user at this point,
+# could make vimrc the one in /etc
+
 # run sshd in the foreground
 CMD /usr/sbin/sshd -D \
     -o UseDNS=no\
