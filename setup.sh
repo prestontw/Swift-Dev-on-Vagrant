@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# it would be nice if this had some variables...
+
 echo "starting installation of base apps"
 sudo apt-get install -y make vim git
 
