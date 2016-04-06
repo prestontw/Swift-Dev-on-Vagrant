@@ -12,11 +12,16 @@ echo "done setting up vim"
 
 # script to set up swift on vagrant
 sudo apt-get install -y clang libicu-dev libxml2
-curl -O https://swift.org/builds/swift-2.2-release/ubuntu1404/swift-2.2-RELEASE/swift-2.2-RELEASE-ubuntu14.04.tar.gz
+swiftWebsite="https://swift.org/builds/swift-2.2-release/ubuntu1404/swift-2.2-RELEASE/"
+swiftPackage="swift-2.2-RELEASE-ubuntu14.04"
+tarEnding=".tar.gz"
+binEnding="/usr/bin"
+
+curl -O $swiftWebsite$swiftPackage$tarEnding
 # skipping verifying gpg, etc
-tar xzf swift-2.2-RELEASE-ubuntu14.04.tar.gz
+tar xzf $swiftPackage$tarEnding
 profile="/home/vagrant/.bashrc"
-echo "export PATH=$PATH:~/swift-2.2-RELEASE-ubuntu14.04/usr/bin" >> $profile
+echo "export PATH=$PATH:~/$swiftPackage$binEnding" >> $profile
 source $profile
 
 echo done with setup!
